@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import '../widgets/drawer.dart';
+
+class HomeScreen extends StatelessWidget {
+  static const String routeName = '/home';
+
+  @override
+  Widget build(BuildContext context) {
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
+    return new Scaffold(
+        appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Icon(Icons.home_outlined, size: 38),
+          iconTheme: IconThemeData(color: Colors.white),
+          centerTitle: true,
+        ),
+        body: Center(
+          // Center is a layout widget. It takes a single child and positions it
+          // in the middle of the parent.
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(Icons.home_filled, size: 150, color: Colors.lightGreen),
+              Text('Home Automation', style: TextStyle(fontWeight: FontWeight.w400, color: Colors.lightGreen, fontSize: 26))
+            ],
+          ),
+        ),
+        drawer: AppDrawer()// This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
